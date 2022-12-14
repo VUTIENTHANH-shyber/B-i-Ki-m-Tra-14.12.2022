@@ -59,6 +59,13 @@ console.log(dienTichTamGiac(3,4,5));
 // Cách 2:
 let p = (a + b + c) / 2;
 let s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+if( a + b < c && a + c < b && b + c < a){
+
+return " Làm gì có tam giác nào nhỏ hơn hạt bụi";
+
+}
+
+
 if(a + b > c && a + c > b && b + c > a){
     return "Diện tích tam giác là: " + s;
 }
