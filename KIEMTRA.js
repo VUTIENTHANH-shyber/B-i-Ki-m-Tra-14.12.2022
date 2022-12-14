@@ -46,6 +46,7 @@ for (let i = a; i <= b; i++) {
 
 
 // 1. Hàm nhận vào 3 số a,b,c . Nếu a,b,c là 3 cạnh của 1 tam giác thì trả về diện tích của tam giác đó 
+// Cách 1 :
 function dienTichTamGiac(a,b,c){
     if(a+b>c && a+c>b && b+c>a){
         var p = (a+b+c)/2;
@@ -55,6 +56,20 @@ function dienTichTamGiac(a,b,c){
     return 'Khong phai tam giac';
 }
 console.log(dienTichTamGiac(3,4,5));
+// Cách 2:
+let p = (a + b + c) / 2;
+let s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+if(a + b > c && a + c > b && b + c > a){
+    return "Diện tích tam giác là: " + s;
+}
+
+if( a + b <= c || a + c <= b || b + c <= a){
+    return "Không phải là 3 cạnh của tam giác";
+}
+console.log(dienTichTamGiac(3,4,5));
+
+
+
 
 // 2. Nhập vào 1 mảng và số X , đếm số lần xuất hiện vị trí X trong mảng
 function demSoLanXuatHien(arr,x){
