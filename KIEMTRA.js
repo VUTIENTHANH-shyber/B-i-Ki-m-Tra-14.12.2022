@@ -49,8 +49,8 @@ for (let i = a; i <= b; i++) {
 // Cách 1 :
 function dienTichTamGiac(a,b,c){
     if(a+b>c && a+c>b && b+c>a){
-        var p = (a+b+c)/2;
-        var s = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+        let p = (a+b+c)/2;
+        let s = Math.sqrt(p*(p-a)*(p-b)*(p-c));
         return s;
     }
     return 'Khong phai tam giac';
@@ -83,7 +83,7 @@ function dienTichTamGiac(a,b,c){
 
 // 2. Nhập vào 1 mảng và số X , đếm số lần xuất hiện vị trí X trong mảng
 function demSoLanXuatHien(arr,x){
-    var count = 0;
+    let count = 0;
     for(let i=0;i<arr.length;i++){
         if(arr[i] == x){
             count++;
@@ -95,8 +95,8 @@ console.log(demSoLanXuatHien([1,2,3,4,5,6,7,8,9,0,9,8,7,6,5,4,3,2,1],prompt("Nh�
 
 // 3. Nhập vào mảng , tìm số lớn thứ 2 trong mảng 
 function timSoLonThuHai(arr){
-    var max1 = arr[0];
-    var max2 = arr[0];
+    let max1 = arr[0];
+    let max2 = arr[0];
     for(let i=0;i<arr.length;i++){
         if(arr[i] > max1){
             max2 = max1;
